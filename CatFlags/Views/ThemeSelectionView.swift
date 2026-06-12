@@ -1,13 +1,8 @@
-//
-//  ThemeSelectionView.swift
-//  CatFlags
-//
-//  Created by academy on 12/06/26.
-//
-
 import SwiftUI
 
 struct ThemeSelectionView: View {
+
+    @State private var selectedTheme: Theme?
 
     var body: some View {
 
@@ -17,23 +12,28 @@ struct ThemeSelectionView: View {
                 .font(.largeTitle)
 
             Button("❤️ Amor") {
-
+                selectedTheme = .love
             }
 
             Button("👨‍👩‍👧 Família") {
+                selectedTheme = .family
             }
 
             Button("🤝 Amigos") {
-
+                selectedTheme = .friendship
             }
 
             Button("👥 Geral") {
+                selectedTheme = .general
+            }
 
+            if let selectedTheme {
+
+                Text("Tema selecionado: \(selectedTheme.rawValue)")
             }
         }
     }
 }
-
 
 struct ThemeSelectionView_Previews: PreviewProvider {
     static var previews: some View {

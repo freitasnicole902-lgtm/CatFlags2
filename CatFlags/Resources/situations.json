@@ -1,0 +1,63 @@
+
+[
+    {
+        "id": 1,
+        "theme": "friendship",
+        "text": "Minha amiga sente ciúmes quando faço novos amigos."
+    },
+    {
+        "id": 2,
+        "theme": "friendship",
+        "text": "Já contei o segredo de um amigo para meu melhor amigo."
+    },
+    {
+        "id": 3,
+        "theme": "friendship",
+        "text": "Costumo fazer piadas em conversas sérias com os meus amigos, mas é só minha personalidade."
+    },
+    {
+        "id": 4,
+        "theme": "friendship",
+        "text": "Nunca inicio conversas com meus amigos, mas sempre respondo quando mandam mensagem."
+    },
+    {
+        "id": 5,
+        "theme": "friendship",
+        "text": "Costumo passar semanas sem falar com meus amigos e voltar como se nada tivesse acontecido."
+    },
+    {
+        "id": 6,
+        "theme": "family",
+        "text": "Meus pais já planejaram uma viagem de férias no mesmo fim de semana do meu aniversário, sem me convidar."
+    },
+    {
+        "id": 7,
+        "theme": "family",
+        "text": "Meus pais fizeram um grupo no WhatsApp só para nós três podermos mandar memes e vídeos engraçados."
+    },
+    {
+        "id": 8,
+        "theme": "family",
+        "text": "Meu pai se recusa a usar o GPS e prefere se perder por horas tentando achar o caminho sozinho."
+    },
+    {
+        "id": 9,
+        "theme": "family",
+        "text": "Minha mãe já criou um perfil falso nas redes sociais para testar a fidelidade do meu irmão com a namorada."
+    },
+    {
+        "id": 10,
+        "theme": "family",
+        "text": "Minha irmã me ligou de madrugada fingindo uma emergência no telefone só para eu ir buscar ela na balada."
+    },
+    {
+        "id": 3,
+        "theme": "love",
+        "text": "Meu parceiro lê minhas mensagens sem permissão."
+    },
+    {
+        "id": 4,
+        "theme": "general",
+        "text": "Uma pessoa próxima mente frequentemente para você."
+    }
+]

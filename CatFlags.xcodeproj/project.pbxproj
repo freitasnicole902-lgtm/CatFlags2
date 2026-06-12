@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F1434072FDC820200D1053D /* RankingCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1434062FDC820200D1053D /* RankingCalculator.swift */; };
 		9F3F5E822FDC3ED600B6F65A /* VoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F5E812FDC3ED600B6F65A /* VoteManager.swift */; };
 		9F5019E92FDB429700F71A66 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5019E82FDB429700F71A66 /* JSONLoader.swift */; };
 		9F6050962FDC5EA200BF1199 /* ThemeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6050952FDC5EA200BF1199 /* ThemeSelectionView.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F1434062FDC820200D1053D /* RankingCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCalculator.swift; sourceTree = "<group>"; };
 		9F3F5E812FDC3ED600B6F65A /* VoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteManager.swift; sourceTree = "<group>"; };
 		9F5019E82FDB429700F71A66 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		9F6050952FDC5EA200BF1199 /* ThemeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionView.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				9FBFD6E72FD9EEE300E88152 /* Models */,
 				9F8300322FDB503C00A8AA1D /* GameTimer.swift */,
 				9F3F5E812FDC3ED600B6F65A /* VoteManager.swift */,
+				9F1434062FDC820200D1053D /* RankingCalculator.swift */,
 			);
 			path = CatFlags;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F1434072FDC820200D1053D /* RankingCalculator.swift in Sources */,
 				9FBFD6F22FD9FE4C00E88152 /* RoomSettings.swift in Sources */,
 				9FBFD6EE2FD9F8C300E88152 /* RoomHost.swift in Sources */,
 				9F8300332FDB503C00A8AA1D /* GameTimer.swift in Sources */,

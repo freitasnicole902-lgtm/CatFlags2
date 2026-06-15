@@ -7,7 +7,7 @@ class GameEngine: ObservableObject {
     let votes: VoteManager
     
     @Published var phase: GamePhase = .lobby
-    @Published var currentPhase: Situation?
+    @Published var currentSituation: Situation?
     @Published var timeRemaining: Int = 300
     @Published var votingTimeRemaining: Int = 30
     @Published var finalRanking: [SituationResult] = []
@@ -25,27 +25,27 @@ class GameEngine: ObservableObject {
         flow.onStateChange = { [ weak self ] phase, situation, timeRemaining, votingTime, ranking in
             
             self?.phase = phase
-            self?.currentPhase = situation
+            self?.currentSituation = situation
             self?.timeRemaining = timeRemaining
             self?.votingTimeRemaining = votingTime
             self?.finalRanking = ranking
             
         }
         
-        func startGame(allSituations: [Situation]) {
-            flow.start(allSituations: allSituations)
-        }
-        
-        func addThirtySeconds() {flow.addThirtySeconds()}
-        
-        func forceStartVoting() {flow.startVoting()}
-        
-        func skipSituation() {flow.skipSituation()}
-        
-        func registerVote(from peerID: String, color: FlagType, totalPeers: Int){
-            flow.registerVote(from: peerID, color: color, totalPeers: totalPeers)
-        }
-        
+    }
+    
+    func startGame(allSituations: [Situation]) {
+        flow.start(allSituations: allSituations)
+    }
+    
+    func addThirtySeconds() {flow.addThirtySeconds()}
+    
+    func forceStartVoting() {flow.startVoting()}
+    
+    func skipSituation() {flow.skipSituation()}
+    
+    func registerVote(from peerID: String, color: FlagType, totalPeers: Int){
+        flow.registerVote(from: peerID, color: color, totalPeers: totalPeers)
     }
     
 }

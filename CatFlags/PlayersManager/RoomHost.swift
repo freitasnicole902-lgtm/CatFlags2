@@ -9,7 +9,7 @@ class RoomHost: NSObject, ObservableObject {
     private(set) var session: MCSession!
     let localPeer: MCPeerID
 
-    
+    private(set) var engine: GameEngine!
     let roomCode: String
     let settings: RoomSettings
     @Published var players: [Player] = []
@@ -23,6 +23,9 @@ class RoomHost: NSObject, ObservableObject {
 
         session = MCSession(peer: localPeer, securityIdentity: nil, encryptionPreference: .required)
         session.delegate = self
+
+        // Agora a session já existe
+        engine = GameEngine(session: session, settings: settings)
 
         advertiser = MCNearbyServiceAdvertiser(
             peer: localPeer,

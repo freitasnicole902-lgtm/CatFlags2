@@ -129,7 +129,7 @@ class GameFlowController {
     private func broadcast() {
         let state = SharedScreenState(
             phase: phase,
-            currentSittuation: currentSituation,
+            currentSituation: currentSituation,
             votingTimeRemaining: votingTimeRemaining,
             finalRanking: finalRanking
         )

@@ -1,9 +1,14 @@
 import SwiftUI
+import MultipeerConnectivity
 
 struct ThemeSelectionView: View {
 
     @State private var selectedTheme: Theme?
 
+    @State private var numParticipants = 3
+
+    @State private var nickname = ""
+    
     let situations = JSONLoader.loadSituations()
 
     var body: some View {
@@ -15,6 +20,13 @@ struct ThemeSelectionView: View {
                     
                     Text("Escolha o tema:")
                         .font(.largeTitle)
+                    
+                    Stepper(
+                        "Jogadores: \(numParticipants)",
+                        value:$numParticipants,
+                        in: 3...8
+                    )
+                    .padding()
                     
                     Button("❤️ Amor") {
                         selectedTheme = .love
@@ -40,7 +52,7 @@ struct ThemeSelectionView: View {
                         
                         if let firstCard = filteredCards.first {
                             
-                            NavigationLink("Ir para o card") {
+                            NavigationLink("Criar Sala") {
                                 CardView(situation: firstCard)
                             }
                             .padding()

@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		9F055EE92FE02BD90030AF53 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F055EE82FE02BD90030AF53 /* GameEngine.swift */; };
 		9F055EEB2FE033270030AF53 /* RoomClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F055EEA2FE033270030AF53 /* RoomClient.swift */; };
+		9F055F0D2FE0561F0030AF53 /* VotingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F055F0C2FE0561F0030AF53 /* VotingView.swift */; };
+		9F055F0F2FE056BB0030AF53 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F055F0E2FE056BB0030AF53 /* ResultsView.swift */; };
+		9F055F132FE07AB50030AF53 /* BoardRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F055F122FE07AB50030AF53 /* BoardRoomView.swift */; };
+		9F055F152FE07E9F0030AF53 /* CreateRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F055F142FE07E9F0030AF53 /* CreateRoomView.swift */; };
+		9F055F172FE07FBA0030AF53 /* LobbyHostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F055F162FE07FBA0030AF53 /* LobbyHostView.swift */; };
+		9F055F192FE082B00030AF53 /* ThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F055F182FE082B00030AF53 /* ThemeButton.swift */; };
 		9F1434072FDC820200D1053D /* RankingCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1434062FDC820200D1053D /* RankingCalculator.swift */; };
 		9F1434102FDC8C1400D1053D /* GameBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F14340F2FDC8C1400D1053D /* GameBroadcaster.swift */; };
 		9F1434122FDC8D0900D1053D /* GameFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1434112FDC8D0900D1053D /* GameFlowController.swift */; };
@@ -39,6 +45,12 @@
 /* Begin PBXFileReference section */
 		9F055EE82FE02BD90030AF53 /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		9F055EEA2FE033270030AF53 /* RoomClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomClient.swift; sourceTree = "<group>"; };
+		9F055F0C2FE0561F0030AF53 /* VotingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingView.swift; sourceTree = "<group>"; };
+		9F055F0E2FE056BB0030AF53 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		9F055F122FE07AB50030AF53 /* BoardRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardRoomView.swift; sourceTree = "<group>"; };
+		9F055F142FE07E9F0030AF53 /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
+		9F055F162FE07FBA0030AF53 /* LobbyHostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyHostView.swift; sourceTree = "<group>"; };
+		9F055F182FE082B00030AF53 /* ThemeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeButton.swift; sourceTree = "<group>"; };
 		9F1434062FDC820200D1053D /* RankingCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCalculator.swift; sourceTree = "<group>"; };
 		9F14340F2FDC8C1400D1053D /* GameBroadcaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBroadcaster.swift; sourceTree = "<group>"; };
 		9F1434112FDC8D0900D1053D /* GameFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFlowController.swift; sourceTree = "<group>"; };
@@ -106,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				9F6050A12FDC7D1B00BF1199 /* situations.json */,
+				9F055F182FE082B00030AF53 /* ThemeButton.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -123,6 +136,11 @@
 			children = (
 				9F6050952FDC5EA200BF1199 /* ThemeSelectionView.swift */,
 				9F1434152FDCA61100D1053D /* CardView.swift */,
+				9F055F0C2FE0561F0030AF53 /* VotingView.swift */,
+				9F055F0E2FE056BB0030AF53 /* ResultsView.swift */,
+				9F055F122FE07AB50030AF53 /* BoardRoomView.swift */,
+				9F055F142FE07E9F0030AF53 /* CreateRoomView.swift */,
+				9F055F162FE07FBA0030AF53 /* LobbyHostView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -137,8 +155,8 @@
 				9FBFD6F32FD9FFB200E88152 /* GamePhase.swift */,
 				9FBFD6F52FD9FFF900E88152 /* SharedScreenState.swift */,
 				9FBFD6F72FDA008900E88152 /* Vote.swift */,
-				9FBFD6FB2FDA010300E88152 /* SituationResult.swift */,
 				9F60509B2FDC5F2200BF1199 /* Theme.swift */,
+				9FBFD6FB2FDA010300E88152 /* SituationResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,7 +166,6 @@
 			children = (
 				9FE893F82FD892C300770F5C /* CatFlags */,
 				9FE893F72FD892C300770F5C /* Products */,
-				9F055EEC2FE0333B0030AF53 /* PlayersManager */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +189,7 @@
 				9FE893FD2FD892C700770F5C /* Assets.xcassets */,
 				9FE893FF2FD892C700770F5C /* Preview Content */,
 				9FBFD6E72FD9EEE300E88152 /* Models */,
+				9F055EEC2FE0333B0030AF53 /* PlayersManager */,
 			);
 			path = CatFlags;
 			sourceTree = "<group>";
@@ -260,7 +278,9 @@
 				9FBFD6EE2FD9F8C300E88152 /* RoomHost.swift in Sources */,
 				9F8300332FDB503C00A8AA1D /* GameTimer.swift in Sources */,
 				9FBFD6F62FD9FFF900E88152 /* SharedScreenState.swift in Sources */,
+				9F055F0D2FE0561F0030AF53 /* VotingView.swift in Sources */,
 				9FE893FC2FD892C300770F5C /* ContentView.swift in Sources */,
+				9F055F152FE07E9F0030AF53 /* CreateRoomView.swift in Sources */,
 				9F3F5E822FDC3ED600B6F65A /* VoteManager.swift in Sources */,
 				9FBFD6FC2FDA010300E88152 /* SituationResult.swift in Sources */,
 				9F055EE92FE02BD90030AF53 /* GameEngine.swift in Sources */,
@@ -269,16 +289,20 @@
 				9F5019E92FDB429700F71A66 /* JSONLoader.swift in Sources */,
 				9F6050982FDC5F0D00BF1199 /* FlagType.swift in Sources */,
 				9F1434142FDC907700D1053D /* SituationsDeck.swift in Sources */,
+				9F055F0F2FE056BB0030AF53 /* ResultsView.swift in Sources */,
 				9FBFD6EC2FD9F04400E88152 /* GeradorDeCodigo.swift in Sources */,
 				9FBFD6F02FD9FDF100E88152 /* Player.swift in Sources */,
 				9FBFD6F82FDA008900E88152 /* Vote.swift in Sources */,
+				9F055F132FE07AB50030AF53 /* BoardRoomView.swift in Sources */,
 				9FBFD6EA2FD9EEE300E88152 /* Situation.swift in Sources */,
 				9FE893FA2FD892C300770F5C /* CatFlagsApp.swift in Sources */,
 				9F60509C2FDC5F2200BF1199 /* Theme.swift in Sources */,
 				9FBFD6F42FD9FFB200E88152 /* GamePhase.swift in Sources */,
 				9F1434162FDCA61100D1053D /* CardView.swift in Sources */,
 				9F6050962FDC5EA200BF1199 /* ThemeSelectionView.swift in Sources */,
+				9F055F172FE07FBA0030AF53 /* LobbyHostView.swift in Sources */,
 				9F055EEB2FE033270030AF53 /* RoomClient.swift in Sources */,
+				9F055F192FE082B00030AF53 /* ThemeButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

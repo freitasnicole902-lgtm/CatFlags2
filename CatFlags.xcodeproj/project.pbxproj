@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F055EE92FE02BD90030AF53 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F055EE82FE02BD90030AF53 /* GameEngine.swift */; };
+		9F055EEB2FE033270030AF53 /* RoomClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F055EEA2FE033270030AF53 /* RoomClient.swift */; };
+		9F1434072FDC820200D1053D /* RankingCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1434062FDC820200D1053D /* RankingCalculator.swift */; };
+		9F1434102FDC8C1400D1053D /* GameBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F14340F2FDC8C1400D1053D /* GameBroadcaster.swift */; };
+		9F1434122FDC8D0900D1053D /* GameFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1434112FDC8D0900D1053D /* GameFlowController.swift */; };
+		9F1434142FDC907700D1053D /* SituationsDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1434132FDC907700D1053D /* SituationsDeck.swift */; };
+		9F1434162FDCA61100D1053D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1434152FDCA61100D1053D /* CardView.swift */; };
 		9F3F5E822FDC3ED600B6F65A /* VoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F5E812FDC3ED600B6F65A /* VoteManager.swift */; };
 		9F5019E92FDB429700F71A66 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5019E82FDB429700F71A66 /* JSONLoader.swift */; };
 		9F6050962FDC5EA200BF1199 /* ThemeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6050952FDC5EA200BF1199 /* ThemeSelectionView.swift */; };
@@ -30,6 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F055EE82FE02BD90030AF53 /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
+		9F055EEA2FE033270030AF53 /* RoomClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomClient.swift; sourceTree = "<group>"; };
+		9F1434062FDC820200D1053D /* RankingCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCalculator.swift; sourceTree = "<group>"; };
+		9F14340F2FDC8C1400D1053D /* GameBroadcaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBroadcaster.swift; sourceTree = "<group>"; };
+		9F1434112FDC8D0900D1053D /* GameFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFlowController.swift; sourceTree = "<group>"; };
+		9F1434132FDC907700D1053D /* SituationsDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationsDeck.swift; sourceTree = "<group>"; };
+		9F1434152FDCA61100D1053D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		9F3F5E812FDC3ED600B6F65A /* VoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteManager.swift; sourceTree = "<group>"; };
 		9F5019E82FDB429700F71A66 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		9F6050952FDC5EA200BF1199 /* ThemeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionView.swift; sourceTree = "<group>"; };
@@ -64,6 +78,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F055EEC2FE0333B0030AF53 /* PlayersManager */ = {
+			isa = PBXGroup;
+			children = (
+				9FBFD6ED2FD9F8C300E88152 /* RoomHost.swift */,
+				9F055EEA2FE033270030AF53 /* RoomClient.swift */,
+			);
+			path = PlayersManager;
+			sourceTree = "<group>";
+		};
+		9F14340C2FDC8A1700D1053D /* GameManagers */ = {
+			isa = PBXGroup;
+			children = (
+				9F8300322FDB503C00A8AA1D /* GameTimer.swift */,
+				9F1434062FDC820200D1053D /* RankingCalculator.swift */,
+				9F14340F2FDC8C1400D1053D /* GameBroadcaster.swift */,
+				9F3F5E812FDC3ED600B6F65A /* VoteManager.swift */,
+				9FBFD6EB2FD9F04400E88152 /* GeradorDeCodigo.swift */,
+				9F1434112FDC8D0900D1053D /* GameFlowController.swift */,
+				9F1434132FDC907700D1053D /* SituationsDeck.swift */,
+				9F055EE82FE02BD90030AF53 /* GameEngine.swift */,
+			);
+			path = GameManagers;
+			sourceTree = "<group>";
+		};
 		9F5019E42FDB423B00F71A66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				9F6050952FDC5EA200BF1199 /* ThemeSelectionView.swift */,
+				9F1434152FDCA61100D1053D /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -91,6 +130,7 @@
 		9FBFD6E72FD9EEE300E88152 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9F6050972FDC5F0D00BF1199 /* FlagType.swift */,
 				9FBFD6E52FD9EEE300E88152 /* Situation.swift */,
 				9FBFD6EF2FD9FDF100E88152 /* Player.swift */,
 				9FBFD6F12FD9FE4C00E88152 /* RoomSettings.swift */,
@@ -99,7 +139,6 @@
 				9FBFD6F72FDA008900E88152 /* Vote.swift */,
 				9FBFD6FB2FDA010300E88152 /* SituationResult.swift */,
 				9F60509B2FDC5F2200BF1199 /* Theme.swift */,
-				9F6050972FDC5F0D00BF1199 /* FlagType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,6 +148,7 @@
 			children = (
 				9FE893F82FD892C300770F5C /* CatFlags */,
 				9FE893F72FD892C300770F5C /* Products */,
+				9F055EEC2FE0333B0030AF53 /* PlayersManager */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,13 +168,10 @@
 				9F5019E42FDB423B00F71A66 /* Resources */,
 				9FE893F92FD892C300770F5C /* CatFlagsApp.swift */,
 				9FE893FB2FD892C300770F5C /* ContentView.swift */,
-				9FBFD6EB2FD9F04400E88152 /* GeradorDeCodigo.swift */,
-				9FBFD6ED2FD9F8C300E88152 /* RoomHost.swift */,
+				9F14340C2FDC8A1700D1053D /* GameManagers */,
 				9FE893FD2FD892C700770F5C /* Assets.xcassets */,
 				9FE893FF2FD892C700770F5C /* Preview Content */,
 				9FBFD6E72FD9EEE300E88152 /* Models */,
-				9F8300322FDB503C00A8AA1D /* GameTimer.swift */,
-				9F3F5E812FDC3ED600B6F65A /* VoteManager.swift */,
 			);
 			path = CatFlags;
 			sourceTree = "<group>";
@@ -218,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F1434072FDC820200D1053D /* RankingCalculator.swift in Sources */,
 				9FBFD6F22FD9FE4C00E88152 /* RoomSettings.swift in Sources */,
 				9FBFD6EE2FD9F8C300E88152 /* RoomHost.swift in Sources */,
 				9F8300332FDB503C00A8AA1D /* GameTimer.swift in Sources */,
@@ -225,8 +263,12 @@
 				9FE893FC2FD892C300770F5C /* ContentView.swift in Sources */,
 				9F3F5E822FDC3ED600B6F65A /* VoteManager.swift in Sources */,
 				9FBFD6FC2FDA010300E88152 /* SituationResult.swift in Sources */,
+				9F055EE92FE02BD90030AF53 /* GameEngine.swift in Sources */,
+				9F1434102FDC8C1400D1053D /* GameBroadcaster.swift in Sources */,
+				9F1434122FDC8D0900D1053D /* GameFlowController.swift in Sources */,
 				9F5019E92FDB429700F71A66 /* JSONLoader.swift in Sources */,
 				9F6050982FDC5F0D00BF1199 /* FlagType.swift in Sources */,
+				9F1434142FDC907700D1053D /* SituationsDeck.swift in Sources */,
 				9FBFD6EC2FD9F04400E88152 /* GeradorDeCodigo.swift in Sources */,
 				9FBFD6F02FD9FDF100E88152 /* Player.swift in Sources */,
 				9FBFD6F82FDA008900E88152 /* Vote.swift in Sources */,
@@ -234,7 +276,9 @@
 				9FE893FA2FD892C300770F5C /* CatFlagsApp.swift in Sources */,
 				9F60509C2FDC5F2200BF1199 /* Theme.swift in Sources */,
 				9FBFD6F42FD9FFB200E88152 /* GamePhase.swift in Sources */,
+				9F1434162FDCA61100D1053D /* CardView.swift in Sources */,
 				9F6050962FDC5EA200BF1199 /* ThemeSelectionView.swift in Sources */,
+				9F055EEB2FE033270030AF53 /* RoomClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,25 +1,30 @@
 import SwiftUI
 
 struct ContentView: View {
-
-    let situations = JSONLoader.loadSituations()
-
+    
+    @State private var goToCreateRoom = false
+    @State private var goToBoardRoom = false
+    
     var body: some View {
-
-        List(situations) { situation in
-
-            VStack(alignment: .leading, spacing: 8) {
-
-                Text(situation.theme.rawValue)
-                    .font(.headline)
-
-                Text(situation.text)
+        NavigationView{
+            VStack{
+                NavigationLink(destination: CreateRoomView(), isActive: $goToCreateRoom){
+                    Button("Criar sala"){
+                        goToCreateRoom = true
+                    }
+                }
+                
+                NavigationLink(destination: JoinRoomView(), isActive: $goToBoardRoom){
+                    Button("Entrar em sala"){
+                        goToBoardRoom = true
+                    }
+                }
+                
             }
-            .padding(.vertical, 4)
+            
         }
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

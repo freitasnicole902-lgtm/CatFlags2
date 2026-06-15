@@ -1,10 +1,3 @@
-//
-//  CardView.swift
-//  CatFlags
-//
-//  Created by academy on 12/06/26.
-//
-
 import SwiftUI
 
 struct CardView: View {
@@ -20,8 +13,8 @@ struct CardView: View {
                 .multilineTextAlignment(.center)
                 .padding()
 
-            Button("Iniciar votação") {
-
+            NavigationLink("Iniciar votação"){
+                VotingView()
             }
         }
     }

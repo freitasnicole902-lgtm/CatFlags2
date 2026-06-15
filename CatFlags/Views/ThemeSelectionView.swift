@@ -8,8 +8,8 @@ struct ThemeSelectionView: View {
 
     var body: some View {
 
-        if #available(iOS 16.0, *) {
-            NavigationStack {
+      
+            NavigationView {
                 
                 VStack(spacing: 20) {
                     
@@ -48,10 +48,8 @@ struct ThemeSelectionView: View {
                     }
                 }
             }
-        } else {
-            // Fallback on earlier versions
         }
-    }
+            // Fallback on earlier versions
 }
 
 struct ThemeSelectionView_Previews: PreviewProvider {

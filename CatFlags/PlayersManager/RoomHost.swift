@@ -14,7 +14,6 @@ class RoomHost: NSObject, ObservableObject {
     let settings: RoomSettings
     @Published var players: [Player] = []
 
-  
     init(nickname: String, settings: RoomSettings) {
         self.localPeer = MCPeerID(displayName: nickname)
         self.roomCode  = Code.generate()
@@ -24,8 +23,16 @@ class RoomHost: NSObject, ObservableObject {
         session = MCSession(peer: localPeer, securityIdentity: nil, encryptionPreference: .required)
         session.delegate = self
 
-        // Agora a session já existe
-        engine = GameEngine(session: session, settings: settings)
+        let hostPlayer = Player(id: localPeer.displayName, nickname: nickname)
+        players.append(hostPlayer)
+
+        // Passa romcode e players inicias pro enginne
+        engine = GameEngine(
+            session:  session,
+            settings: settings,
+            roomCode: roomCode,
+            players:  players
+        )
 
         advertiser = MCNearbyServiceAdvertiser(
             peer: localPeer,
@@ -37,15 +44,11 @@ class RoomHost: NSObject, ObservableObject {
             serviceType: serviceType
         )
         advertiser.delegate = self
-
-        players.append(Player(id: localPeer.displayName, nickname: nickname))
     }
 
-
     func startAdvertising() { advertiser.startAdvertisingPeer() }
-    func stopAdvertising()  { advertiser.stopAdvertisingPeer() }
+    func stopAdvertising()  { advertiser.stopAdvertisingPeer()  }
 }
-
 
 extension RoomHost: MCNearbyServiceAdvertiserDelegate {
 
@@ -54,7 +57,6 @@ extension RoomHost: MCNearbyServiceAdvertiserDelegate {
                     withContext context: Data?,
                     invitationHandler: @escaping (Bool, MCSession?) -> Void) {
 
-        // Sala cheia -> rejeita
         guard players.count < settings.numParticipants else {
             invitationHandler(false, nil)
             return
@@ -74,7 +76,10 @@ extension RoomHost: MCNearbyServiceAdvertiserDelegate {
 
         if accepted {
             DispatchQueue.main.async {
-                self.players.append(Player(id: peerID.displayName, nickname: nickname))
+                let newPlayer = Player(id: peerID.displayName, nickname: nickname)
+                self.players.append(newPlayer)
+                // Avisa o flow que a lista de players mudou
+                self.engine.flow.updatePlayers(self.players)
             }
         }
 
@@ -82,23 +87,30 @@ extension RoomHost: MCNearbyServiceAdvertiserDelegate {
     }
 }
 
-
 extension RoomHost: MCSessionDelegate {
-    
+
     func session(_ session: MCSession, peer peerID: MCPeerID,
                  didChange state: MCSessionState) {
-        
         if state == .notConnected {
             DispatchQueue.main.async {
                 self.players.removeAll { $0.id == peerID.displayName }
+                self.engine.flow.updatePlayers(self.players)
             }
         }
     }
-    
+
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        
+        if let vote = try? JSONDecoder().decode(Vote.self, from: data) {
+            DispatchQueue.main.async {
+                self.engine.registerVote(
+                    from:       peerID.displayName,
+                    color:      vote.color,
+                    totalPeers: self.session.connectedPeers.count
+                )
+            }
+        }
     }
-    
+
     func session(_ session: MCSession, didReceive stream: InputStream,
                  withName streamName: String, fromPeer peerID: MCPeerID) {}
     func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String,
@@ -106,4 +118,5 @@ extension RoomHost: MCSessionDelegate {
     func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String,
                  fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {}
 }
+
 

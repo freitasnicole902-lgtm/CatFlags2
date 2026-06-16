@@ -7,6 +7,7 @@ class RoomClient: NSObject, ObservableObject {
     private var browser: MCNearbyServiceBrowser!
     private(set) var session: MCSession!
     let localPeer: MCPeerID
+    let clientEngine = ClientGameEngine()
     
     @Published var connectionState: MCSessionState = .notConnected
     @Published var screenState: SharedScreenState?
@@ -83,11 +84,12 @@ extension RoomClient: MCSessionDelegate {
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        guard let state = try? JSONDecoder().decode(SharedScreenState.self, from: data) else {return}
-        DispatchQueue.main.async{
-            self.screenState = state
+            guard let state = try? JSONDecoder().decode(SharedScreenState.self, from: data) else { return }
+            DispatchQueue.main.async {
+                self.screenState = state
+                self.clientEngine.update(from: state)
+            }
         }
-    }
     
     func session(_ session: MCSession,
                  didReceive stream: InputStream,

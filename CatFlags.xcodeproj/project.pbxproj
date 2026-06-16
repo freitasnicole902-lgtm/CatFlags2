@@ -20,6 +20,11 @@
 		9F1434122FDC8D0900D1053D /* GameFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1434112FDC8D0900D1053D /* GameFlowController.swift */; };
 		9F1434142FDC907700D1053D /* SituationsDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1434132FDC907700D1053D /* SituationsDeck.swift */; };
 		9F1434162FDCA61100D1053D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1434152FDCA61100D1053D /* CardView.swift */; };
+		9F2B41422FE179D0001079E4 /* LobbyClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B41412FE179D0001079E4 /* LobbyClientView.swift */; };
+		9F2B41442FE17C6D001079E4 /* DiscussionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B41432FE17C6D001079E4 /* DiscussionView.swift */; };
+		9F2B41462FE18165001079E4 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B41452FE18165001079E4 /* BoardView.swift */; };
+		9F2B41482FE18252001079E4 /* ClientGameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B41472FE18252001079E4 /* ClientGameEngine.swift */; };
+		9F2B414A2FE182DD001079E4 /* GameStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B41492FE182DD001079E4 /* GameStateProtocol.swift */; };
 		9F3F5E822FDC3ED600B6F65A /* VoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F5E812FDC3ED600B6F65A /* VoteManager.swift */; };
 		9F5019E92FDB429700F71A66 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5019E82FDB429700F71A66 /* JSONLoader.swift */; };
 		9F6050962FDC5EA200BF1199 /* ThemeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6050952FDC5EA200BF1199 /* ThemeSelectionView.swift */; };
@@ -56,6 +61,11 @@
 		9F1434112FDC8D0900D1053D /* GameFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFlowController.swift; sourceTree = "<group>"; };
 		9F1434132FDC907700D1053D /* SituationsDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationsDeck.swift; sourceTree = "<group>"; };
 		9F1434152FDCA61100D1053D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		9F2B41412FE179D0001079E4 /* LobbyClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyClientView.swift; sourceTree = "<group>"; };
+		9F2B41432FE17C6D001079E4 /* DiscussionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionView.swift; sourceTree = "<group>"; };
+		9F2B41452FE18165001079E4 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		9F2B41472FE18252001079E4 /* ClientGameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientGameEngine.swift; sourceTree = "<group>"; };
+		9F2B41492FE182DD001079E4 /* GameStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateProtocol.swift; sourceTree = "<group>"; };
 		9F3F5E812FDC3ED600B6F65A /* VoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteManager.swift; sourceTree = "<group>"; };
 		9F5019E82FDB429700F71A66 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		9F6050952FDC5EA200BF1199 /* ThemeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionView.swift; sourceTree = "<group>"; };
@@ -110,6 +120,7 @@
 				9F1434112FDC8D0900D1053D /* GameFlowController.swift */,
 				9F1434132FDC907700D1053D /* SituationsDeck.swift */,
 				9F055EE82FE02BD90030AF53 /* GameEngine.swift */,
+				9F2B41472FE18252001079E4 /* ClientGameEngine.swift */,
 			);
 			path = GameManagers;
 			sourceTree = "<group>";
@@ -141,6 +152,9 @@
 				9F055F122FE07AB50030AF53 /* BoardRoomView.swift */,
 				9F055F142FE07E9F0030AF53 /* CreateRoomView.swift */,
 				9F055F162FE07FBA0030AF53 /* LobbyHostView.swift */,
+				9F2B41412FE179D0001079E4 /* LobbyClientView.swift */,
+				9F2B41432FE17C6D001079E4 /* DiscussionView.swift */,
+				9F2B41452FE18165001079E4 /* BoardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +171,7 @@
 				9FBFD6F72FDA008900E88152 /* Vote.swift */,
 				9F60509B2FDC5F2200BF1199 /* Theme.swift */,
 				9FBFD6FB2FDA010300E88152 /* SituationResult.swift */,
+				9F2B41492FE182DD001079E4 /* GameStateProtocol.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -273,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F2B41462FE18165001079E4 /* BoardView.swift in Sources */,
 				9F1434072FDC820200D1053D /* RankingCalculator.swift in Sources */,
 				9FBFD6F22FD9FE4C00E88152 /* RoomSettings.swift in Sources */,
 				9FBFD6EE2FD9F8C300E88152 /* RoomHost.swift in Sources */,
@@ -280,6 +296,7 @@
 				9FBFD6F62FD9FFF900E88152 /* SharedScreenState.swift in Sources */,
 				9F055F0D2FE0561F0030AF53 /* VotingView.swift in Sources */,
 				9FE893FC2FD892C300770F5C /* ContentView.swift in Sources */,
+				9F2B41482FE18252001079E4 /* ClientGameEngine.swift in Sources */,
 				9F055F152FE07E9F0030AF53 /* CreateRoomView.swift in Sources */,
 				9F3F5E822FDC3ED600B6F65A /* VoteManager.swift in Sources */,
 				9FBFD6FC2FDA010300E88152 /* SituationResult.swift in Sources */,
@@ -287,6 +304,7 @@
 				9F1434102FDC8C1400D1053D /* GameBroadcaster.swift in Sources */,
 				9F1434122FDC8D0900D1053D /* GameFlowController.swift in Sources */,
 				9F5019E92FDB429700F71A66 /* JSONLoader.swift in Sources */,
+				9F2B41442FE17C6D001079E4 /* DiscussionView.swift in Sources */,
 				9F6050982FDC5F0D00BF1199 /* FlagType.swift in Sources */,
 				9F1434142FDC907700D1053D /* SituationsDeck.swift in Sources */,
 				9F055F0F2FE056BB0030AF53 /* ResultsView.swift in Sources */,
@@ -294,7 +312,9 @@
 				9FBFD6F02FD9FDF100E88152 /* Player.swift in Sources */,
 				9FBFD6F82FDA008900E88152 /* Vote.swift in Sources */,
 				9F055F132FE07AB50030AF53 /* BoardRoomView.swift in Sources */,
+				9F2B41422FE179D0001079E4 /* LobbyClientView.swift in Sources */,
 				9FBFD6EA2FD9EEE300E88152 /* Situation.swift in Sources */,
+				9F2B414A2FE182DD001079E4 /* GameStateProtocol.swift in Sources */,
 				9FE893FA2FD892C300770F5C /* CatFlagsApp.swift in Sources */,
 				9F60509C2FDC5F2200BF1199 /* Theme.swift in Sources */,
 				9FBFD6F42FD9FFB200E88152 /* GamePhase.swift in Sources */,

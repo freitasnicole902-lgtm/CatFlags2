@@ -54,7 +54,7 @@ struct CreateRoomView: View {
 
                VStack(alignment: .leading, spacing: 16) {
                    Text("Escolha o tema")
-                       .foregroundColor(Color("TextoPrincipal"))
+                       .foregroundColor(Color("BotaoAmarelo"))
                        .font(.title3.bold())
 
                    HStack(spacing: 12) {
@@ -121,7 +121,7 @@ struct CreateRoomView: View {
                            ? Color("BotaoAmarelo")
                            : Color("BotaoAmarelo")
                        )
-                       .cornerRadius(32)
+                       .cornerRadius(25)
                }
                .disabled(nickname.trimmingCharacters(in: .whitespaces).isEmpty)
            }

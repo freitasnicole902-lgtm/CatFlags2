@@ -5,28 +5,17 @@ struct CardView: View {
     let situation: Situation
 
     var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color("FundoCard1"))
 
-        VStack(spacing: 20) {
-
-            Text(situation.text)
-                .font(.title2)
+            Text("\"\(situation.text)\"")
+                .foregroundColor(Color("TextoPrincipal"))
+                .font(.title3.bold())
                 .multilineTextAlignment(.center)
-                .padding()
-
-            NavigationLink("Iniciar votação"){
-                VotingView()
-            }
+                .padding(24)
         }
-    }
-}
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardView(
-            situation: Situation(
-                id: 1,
-                theme: .love,
-                text: "Meu parceiro(a) lê minhas mensagens sem permissão."
-            )
-        )
+        .frame(maxWidth: .infinity)
+        .frame(height: 280)
     }
 }

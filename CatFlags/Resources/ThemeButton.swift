@@ -10,10 +10,10 @@ struct ThemeButton: View {
             VStack(spacing: 8) {
                 Image(systemName: iconName)
                     .font(.title2)
-                    .foregroundColor(isSelected ? .black : .white)
+                    .foregroundColor(isSelected ? Color("BotaoAmarelo"): .white)
                 Text(label)
                     .font(.caption)
-                    .foregroundColor(isSelected ? .black : .white)
+                    .foregroundColor(isSelected ? Color("BotaoAmarelo") : .white)
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 12)

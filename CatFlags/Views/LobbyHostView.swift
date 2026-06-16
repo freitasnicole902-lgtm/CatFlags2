@@ -1,46 +1,7 @@
-//
-//  LobbyHostView.swift
-//  CatFlags
-//
-//  Created by Academy on 15/06/26.
-//
-//import SwiftUI
-//
-//struct HostLobbyView: View {
-//
-//    @ObservedObject var host: RoomHost
-//
-//    var body: some View {
-//
-//        VStack(spacing: 20) {
-//
-//            Text("Código da sala")
-//                .font(.headline)
-//
-//            Text(host.roomCode)
-//                .font(.largeTitle)
-//
-//            Text("Jogadores")
-//
-//            List(host.players) { player in
-//                Text(player.nickname)
-//            }
-//
-//            Button("Iniciar partida") {
-//
-//            }
-//        }
-//    }
-//}
-//
-//#Preview {
-//    LobbyHostView()
-//}
-
 import SwiftUI
 
 struct LobbyHostView: View {
-    
+
     @ObservedObject var host: RoomHost
     @ObservedObject var engine: GameEngine
     @State private var gameStarted = false
@@ -48,7 +9,11 @@ struct LobbyHostView: View {
 
    var body: some View {
        if gameStarted {
-           Text("Jogo") 
+           BoardView(
+            engine: engine,
+            isHost: true,
+            host: host
+           )
        } else {
            content
        }
@@ -134,7 +99,7 @@ struct LobbyHostView: View {
                        .frame(maxWidth: .infinity)
                        .padding()
                        .background(Color("BotaoAmarelo"))
-                       .cornerRadius(32)
+                       .cornerRadius(25)
                }
            }
            .padding()

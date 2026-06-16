@@ -6,10 +6,17 @@ struct JoinRoomView: View {
     @State private var nickname = ""
     @State private var client: RoomClient?
     @State private var isJoined = false
+    //let clientengine: ClientGameEngine
 
     var body: some View {
         if isJoined {
-            Text("Lobby Cliente")
+            if let client {
+                BoardView(
+                    engine: client.clientEngine,
+                    isHost: false,
+                    client: client
+                )
+            }
         } else {
             content
         }
@@ -105,7 +112,7 @@ struct JoinRoomView: View {
                         .background(
                             canJoin ? Color("BotaoAmarelo") : Color("TextoSecundario")
                         )
-                        .cornerRadius(32)
+                        .cornerRadius(25)
                 }
                 //.disabled(!canJoin)
             }

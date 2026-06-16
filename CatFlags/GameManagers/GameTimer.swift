@@ -50,6 +50,7 @@ class GameTimer {
                 self.secondsLeft -= 1
                 onTick(self.secondsLeft)
             } else {
+                print("TIMER FINALIZOU")
                 self.stop()
                 onFinish()
             }
